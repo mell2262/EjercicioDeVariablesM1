@@ -23,7 +23,7 @@ public class ModuloUno {
 		System.out.println(apellido1+" "+cognom2+" "+nombre);
 		System.out.println(dia+"/"+mes+"/"+año);
 		//--------------------------------------------------------------//
-		int BISIESTO=1948;
+		final int BISIESTO=1948;
 		int contBisiesto=4;
 		
 		double result=Math.floor((año-BISIESTO)/contBisiesto);
