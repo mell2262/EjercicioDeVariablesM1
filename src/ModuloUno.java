@@ -2,15 +2,11 @@
 public class ModuloUno {
 
 	public static void main(String[] args) {
-		/*FASE 3
-		 Partiendo del año 1948 tiene que hacer un bucle for y mostrar los años 
-		bisiestos hasta llega a su año de nacimiento.
-		 ATENCION! Deberá cambiar el tipo de variable de 1948 para poder modificarla.
-		 Cree una variable bool que sera cierta si el año de nacimiento es bisiesto o 
-		falsa si no lo es.
-		 En caso de que la variable bool sea cierta, debe mostrar por consola una 
-		frase donde lo diga, en caso de ser falsa mostraréis la frase pertinente. 
-		Crea dos variables string para guardar las frases.
+		/*Cree una variable donde juntos el nombre y los apellidos (todo en una variable)
+		 *  y otro donde juntos la fecha de nacimiento separada por "/" 
+		 *  (todo en una variable). 
+		 *  Muestre por consola las variables del nombre completo,
+		 *  la fecha de nacimiento y si el año de nacimiento es de traspaso o no.
 
 		*/
 		
@@ -32,18 +28,26 @@ public class ModuloUno {
 		System.out.println(result);
 		//-------------------------------------------------------------//
 		String bisiestoTrue="es año bisiesto";
-		String bisiestoFalse="el año no es bisiesto";
+		String bisiestoFalse="no es año bisiesto";
 
 		for (double i=BISIESTO; i<=año; i++) {
 			boolean calcBisiesto;
-			
 			if ((((año-i)/contBisiesto)%1)!=0) calcBisiesto=false;
 			else calcBisiesto=true;
 			
 			if (calcBisiesto==true) System.out.println((int)i+" "+bisiestoTrue);
 			else System.out.println(bisiestoFalse);
 		}
-		
+		//------------------------------------------------------------//
+		String nombreCompleto=(nombre+" "+apellido1+" "+cognom2);
+		String fechaNacimiento=(dia+"/"+mes+"/"+(int)año);
+		String esNoEsBisiesto;
+
+		if ((((año-BISIESTO)/contBisiesto)%1)!=0) esNoEsBisiesto=bisiestoFalse;
+		else esNoEsBisiesto=bisiestoTrue;
+		System.out.println("Mi nombre es "+ nombreCompleto);
+		System.out.println("Naci el "+fechaNacimiento);
+		System.out.println("Mi año de nacimiento "+esNoEsBisiesto);
 	}
 
 }
